@@ -3,11 +3,11 @@ import { portfolioData } from '../data/portfolio';
 import { Code2, Database, Layout, Server, Cloud, Shield, Activity, Cpu } from 'lucide-react';
 
 const categoryIcons = {
-  languages: <Code2 className="text-primary-400" size={24} />,
-  frameworks: <Layout className="text-accent-400" size={24} />,
-  infrastructure: <Database className="text-emerald-400" size={24} />,
-  devops: <Cloud className="text-blue-400" size={24} />,
-  concepts: <Cpu className="text-orange-400" size={24} />
+  languages: <Code2 className="text-text-primary" size={24} aria-hidden="true" />,
+  frameworks: <Layout className="text-text-primary" size={24} aria-hidden="true" />,
+  infrastructure: <Database className="text-text-primary" size={24} aria-hidden="true" />,
+  devops: <Cloud className="text-text-primary" size={24} aria-hidden="true" />,
+  concepts: <Cpu className="text-text-primary" size={24} aria-hidden="true" />
 };
 
 export default function TechStack() {
@@ -30,8 +30,8 @@ export default function TechStack() {
     <section id="tech-stack" className="py-20 relative z-10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Arsenal</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-primary">Technical Arsenal</h2>
+          <div className="w-24 h-2 bg-primary mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -42,13 +42,13 @@ export default function TechStack() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-100px" }}
-              className="glass-panel p-8"
+              className="@container panel p-8 hover:border-primary transition-colors"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-slate-800/50 rounded-lg">
-                  {categoryIcons[category] || <Server size={24} />}
+              <div className="flex items-center gap-3 mb-6 border-b border-surface-border pb-4">
+                <div className="p-3 bg-surface-hover rounded-lg border border-surface-border">
+                  {categoryIcons[category] || <Server size={24} aria-hidden="true" />}
                 </div>
-                <h3 className="text-xl font-semibold capitalize">{category}</h3>
+                <h3 className="text-xl font-bold capitalize text-text-primary">{category}</h3>
               </div>
               
               <div className="flex flex-wrap gap-2">
@@ -56,7 +56,7 @@ export default function TechStack() {
                   <motion.span
                     key={item}
                     variants={itemVariants}
-                    className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/50 rounded-full text-sm text-slate-300 transition-colors cursor-default"
+                    className="px-4 py-2 bg-surface-hover hover:bg-surface-border border border-surface-border rounded-md text-sm font-medium text-text-primary transition-colors cursor-default"
                   >
                     {item}
                   </motion.span>

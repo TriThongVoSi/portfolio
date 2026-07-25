@@ -13,9 +13,6 @@ import {
   Users
 } from 'lucide-react';
 
-import weatherMockup from '../assets/weather-mockup.png';
-import acmMockup from '../assets/acm-mockup.png';
-import emrMockup from '../assets/emr-mockup.png';
 import acmMicroservicesMockup from '../assets/acm-microservices-mockup.png';
 
 export const portfolioData = {
@@ -37,66 +34,47 @@ export const portfolioData = {
   },
   caseStudies: [
     {
-      id: "searching-weather",
-      title: "WeCliFor — Weather Website",
+      id: "agreli-microservice",
+      title: "Project AgReli Microservice",
       type: "product",
-      description: "A modern full-stack web application for real-time weather forecasting. Built with a separated client-server architecture, it features PWA support, interactive hourly temperature charts, and an intelligent push notification system via Firebase.",
-      role: "Fullstack Developer",
+      description: "Migrated a 12-service agriculture microservices platform (farm, season, inventory, etc.) from a Modular Monolith. Implemented end-to-end traceability, CI/CD pipelines, and AI-assisted support.",
+      role: "Back-end Engineer & System Designer",
       features: [
-        "Real-time search with Google Places API autocomplete",
-        "Interactive dashboard with hourly temperature charts",
-        "Custom weather alerts & push notifications via Firebase",
-        "Responsive PWA design with multi-language support"
+        "End-to-end product traceability using DFS/BFS graph traversal",
+        "AI-assisted support chatbot & sustainability scoring (Spring AI, Vertex AI, Chroma)",
+        "Strict Docker Compose orchestration with healthcheck race condition resolution",
+        "Resilient microservices communication via Feign with fallbackFactory pattern",
+        "Automated Pre-Harvest Interval (PHI) compliance countdowns"
       ],
-      techStack: ["React", "Node.js", "Firebase", "PWA", "Google Places API"],
-      link: "https://github.com/elnino282/searching_weather",
-      images: [weatherMockup]
-    },
-    {
-      id: "smart-agriculture",
-      title: "Smart Agriculture Platform",
-      type: "product",
-      description: "A comprehensive monolithic application focusing on crop management, a marketplace for inventory, buyer order flow, and an integrated AI assistant for farm advisory.",
-      role: "Fullstack / Backend Developer",
-      features: [
-        "Crop & season tracking",
-        "Marketplace inventory management",
-        "Buyer order flows with mock payment",
-        "AI Assistant for farm advisory"
-      ],
-      techStack: ["Java 23", "Spring Boot 3", "PostgreSQL", "Docker", "OpenAI API"],
-      link: "https://github.com/TriThongVoSi/SE122-Code-MicroserviceReady-Test",
-      images: [acmMockup]
-    },
-    {
-      id: "emr-system",
-      title: "EMR Backend System",
-      type: "product",
-      description: "A solid backend foundation for an Electronic Medical Record system with robust OOP domain design, JWT authentication, and secure data access.",
-      role: "Backend Developer",
-      features: [
-        "OOP Domain Design",
-        "Spring Security + JWT Auth",
-        "PostgreSQL Schema Design"
-      ],
-      techStack: ["Java 23", "Spring Boot 3", "PostgreSQL", "Spring Security"],
-      link: "https://github.com/TriThongVoSi/SE330-ElectronicMedicalRecord",
-      images: [emrMockup]
-    },
-    {
-      id: "agriculture-microservices",
-      title: "Smart Agriculture Microservices",
-      type: "product",
-      description: "A microservices architecture evolution of the agriculture platform, featuring an API Gateway, RabbitMQ event flow, and a notification pipeline.",
-      role: "Backend Architect",
-      features: [
-        "API Gateway implementation",
-        "Separated domain services",
-        "RabbitMQ event-driven communication"
-      ],
-      techStack: ["Java 23", "Spring Cloud", "RabbitMQ", "Docker Compose", "MySQL"],
+      techStack: ["Java 23", "Spring Boot 3.5", "RabbitMQ", "Docker", "MySQL", "Spring AI"],
       link: "https://github.com/elnino282/VietFuture2026",
       images: [acmMicroservicesMockup]
+    },
+    {
+      id: "multi-agent-req-elicitation",
+      title: "Knowledge-Grounded Multi-Agent Requirement Elicitation",
+      type: "academic",
+      description: "A research position paper (Under Review at KMIS) proposing a multi-agent AI framework to facilitate software requirement elicitation, mitigating missing assumptions and conflicting quality concerns.",
+      agents: [
+        {
+          name: "Orchestrator Agent",
+          description: "Selectively routes quality-sensitive conflicts and ambiguous requirements to specialized Analyst Agents.",
+          icon: BrainCircuit,
+          color: "text-purple-500"
+        },
+        {
+          name: "Analyst Agents",
+          description: "Specialized expert agents that resolve system design conflicts and ensure quality attribute constraints are met.",
+          icon: Users,
+          color: "text-blue-500"
+        },
+        {
+          name: "RAG Grounding",
+          description: "Leverages Retrieval-Augmented Generation to ground multi-agent discussions in factual evidence.",
+          icon: Database,
+          color: "text-emerald-500"
+        }
+      ]
     }
   ],
   otherProjects: [
